@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*body{
+    background-color: black;
+
+}*/
+
+#canvas1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: solid 2px rgb(7, 7, 7);
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+#playerImage{
+    display: none;
+
+}
+#backgroundImage {
+    display: none;
+}
+#fireImage, #boomImage{
+    display: none;
+}
+
+#enemyImage,#enemyImage1,#enemyImage2,#enemyImage3,#enemyImage4{
+    display: none;
+}
+
+#layer1Image, #layer2Image, #layer3Image, #layer4Image, #layer5Image {
+    display: none;
+}
+
+.controls{
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 50px;
+    left: 10px;
+
+
+}
+.controls, select, option{
+    font-size: 20px;
+}
+/*#fullScreenButton {
+    position: absolute;
+    font-size: 20px;
+    padding: 10px;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+       
+}*/
+/*#rightButton {
+    position: absolute;
+    font-size: 20px;
+    padding: 10px;
+    bottom: 5px;
+    left: 155px;
+    transform: translate(-50%, -50%);
+
+}
+#leftButton {
+    position: absolute;
+    font-size: 20px;
+    padding: 10px;
+    bottom: 5px;
+    left: 95px;
+    transform: translate(-50%, -50%);
+
+}*/

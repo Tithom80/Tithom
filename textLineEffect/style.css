@@ -1,0 +1,26 @@
+* {
+     margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+    
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#canvas1{
+    width: 700px;
+    height: 700px;
+    border: 4px solid black;
+    background-color: black;
+             
+}
+.img{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+}

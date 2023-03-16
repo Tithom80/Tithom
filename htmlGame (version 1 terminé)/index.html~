@@ -1,0 +1,22 @@
+<html>
+<script>
+    function afficherRectangleBleu() {
+        let context2D = document.getElementById('theCanvas').getContext('2d');
+        // définition de la couleur du tracé
+        context2D.strokeStyle = "#0000FF";
+        // dessin du rectangle
+        context2D.rect(200, 200, 100, 25);
+        // affichage dans le canvas
+        context2D.stroke();
+    }
+    // appel de la fonction afficherRectangleBleu au chargement de la page
+    window.onload = afficherRectangleBleu;
+</script>
+
+<body>
+    <canvas id="theCanvas" width="800" height="600" style="border: 1px solid #000000;">
+        Votre navigateur ne supporte pas le Canvas HTML5
+    </canvas>
+</body>
+
+</html>

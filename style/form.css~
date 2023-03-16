@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Brush Script MT', cursive;
+}
+@font-face{
+  font-family : "handwriting";
+  src: url('fonts/journal.ttf') format('woff2'),
+
+}
+
+.login {
+  color: rgb(172, 170, 170);
+  background-color: rgb(19, 18, 18);
+  width: 300px;
+  padding-left: 150px;
+}
+
+
+/*#clientForm {
+
+}
+form {
+
+}
+
+#form {
+
+}
+label {
+
+}
+
+input  {
+  
+
+}*/
+.form {
+  width: 400px;
+  padding-top: 5px;
+}
+.label{
+  float: left;
+}
+.case {
+  float: right;
+  height : 20px;
+  color: rgb(172, 170, 170);
+  background-color: rgb(19, 18, 18);
+  border-radius: 5px;
+
+}
+
+/*#name {
+
+}
+
+#email {
+
+}*/
+#tel {
+  min-width: 135px;
+
+}
+
+/*#adresse {
+
+}*/
+#affichage {
+  padding-left: 125px;
+  color: rgb(172, 170, 170);
+  background-color: rgb(19, 18, 18);
+  border: solid 1px;
+  border-color: rgb(172, 170, 170);
+}
+.error {
+  color: #FF0000;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Puzzle Cam Tom</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="icon" type="image/png" href="favicon.png">-->
+    
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+
+</head>
+
+<body onload="main()">
+
+        <canvas id="canvas1"></canvas>
+        
+        <div id="menuItems">
+            <a href="../../../programming.php">retour</a>
+            <div id="menu">
+                <div id="controls">
+                    Difficulty
+                    <select id="difficulty" onchange="setDifficulty()">
+                        <option value="easy">easy</option>
+                        <option value="normal">normal</option>
+                        <option value="hard">hard</option>
+                        <option value="insane">Insane</option>
+                    </select>
+                    
+                </div>
+                <button onclick="restart()">Start</button>
+            </div>
+            
+
+        </div>
+
+        <div id="time">
+        
+        </div>
+
+    
+</body>
+    
+</html>

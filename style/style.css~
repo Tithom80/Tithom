@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Brush Script MT', cursive;
+}
+@font-face{
+  font-family : "handwriting";
+  src: url('fonts/journal.ttf') format('woff2'),
+
+}
+
+body {
+  margin: 0;
+  font-family: 'Brush Script MT', cursive;
+  color: #ddd;
+  background-color: rgb(100, 100, 100);
+}
+#header {
+  height: 100%;
+	padding-top: 150px;
+}
+#titre {
+
+	/*float: left;*/
+	min-width: 250px;
+  max-width: 80%;
+  padding-left: 100px;
+
+  
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #F0CD2F;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: rgb(100, 100, 100);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: rgb(100, 100, 100);
+  color: black;
+}
+
+
+/* Style the content */
+.content {
+  /*color: bisque;
+  background-color: #181717;*/
+  padding: 10px;
+}
+.img{
+	display: block;
+	width: 200px;
+	padding-left: 135px;
+
+}
+#adresseCarte{
+
+  color: #ddd;
+  background-color: rgb(19, 18, 18);
+  border: solid 1px;
+  border-color: rgb(172, 170, 170);
+
+}
+#horaires{
+
+  color: rgb(172, 170, 170);
+  background-color: rgb(100, 100, 100);
+  border: solid 1px;
+  border-color: rgb(172, 170, 170);
+
+}
+.drawbar{
+	width: 300px;
+}
+.check{
+	float: left;
+	border-radius: 5px;
+}
+.pick{
+	float: right;
+	border-radius: 5px;
+}
+#canvas{
+	background-color: white;
+
+}
+/* Style the video */
+
+  .video-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .video-list .video {
+      width: 200px;
+      margin: 10px;
+      text-align: center;
+  }
+
+  .video-list .video img {
+      width: 100%;
+  }
+
+  .video-list .video h3 {
+      font-size: 1.2em;
+      margin-top: 10px;
+  }
+
+/* Style the footer */
+.footer {
+color: rgb(100, 100, 100);
+  background-color: #F0CD2F;
+  padding: 10px;
+}

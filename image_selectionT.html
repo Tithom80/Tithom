@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Selection Tool</title>
+        <script>
+            function ReadFolderContents()
+            {
+                // Get a reference to the form element containing the file input control
+                var imageForm = document.getElementById("imageForm");
+
+                // Initalize an array to hold the selected images 
+                var selectedImages = [];
+
+                // Loop through each element in the form
+                for (var i = 0; i < imageForm.elements.length; i++) {
+                    // Check if this element is a file input control
+                    if (imageForm.elements[i].type == "file") { 
+                        // If so, add the file name to the list of selected images
+                        selectedImages.push(imageForm.elements[i].value); 
+                    }
+                }
+
+                // Use AJAX to call a server-side script and pass it the list of selected images 
+                var xmlhttp; 
+
+                if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp = new XMLHttpRequest(); 
+                }
+                else { // code for IE6, IE5
+                    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP"); 
+                }
+
+                // Setup the request
+                xmlhttp.onreadystatechange = function() {
+                    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                        // Read the server's response and parse it into an array
+                        var imagesArray = xmlhttp.responseText.split(",");
+
+                        // Create an HTML table to hold the list of images
+                        var output = document.createElement('table');
+
+                        // Loop through each image and add a row to the table
+                        for (var i = 0; i < imagesArray.length; i++) {
+                            var row = document.createElement('tr');
+                            row.innerHTML = '<td>'+imagesArray[i]+'</td><td><input type="checkbox" name="selectedImage'+i+'" value="'+imagesArray[i]+'"/></td>';
+                            output.appendChild(row); 
+                        }
+
+                        // Add the table to the page
+                        document.getElementById('images').appendChild(output);
+                    }
+                }
+
+                // Make the request
+                xmlhttp.open("GET","getImages.php?",false);
+                xmlhttp.send("images="+selectedImages);
+            }
+        </script>
+    </head>
+    <body onload="ReadFolderContents()">
+
+        <h1>Image Selection Tool</h1>
+
+        <form id="imageForm" method="post" action="uploadImages.php">
+            <div id="images">
+            </div>
+
+            <input type="submit" value="Upload Images" />
+        </form>
+
+    </body>
+</html>

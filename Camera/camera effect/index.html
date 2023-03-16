@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>Camera effect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="canvas1"></canvas>
+    <video id="myVideo"></video>
+    <a href="../../../programming.php">retour</a>
+    <script>
+        const myVideo = document.createElement("video");
+        navigator.mediaDevices.getUserMedia(
+            {video:true}).then(function (rawData){
+                myVideo.srcObject=rawData;
+                myVideo.play();
+                myVideo.onloadeddata=function(){
+                    canvas1.width=myVideo.videoWidth;
+                    canvas1.height=myVideo.videoHeight;
+                    new EffectColorFinder(canvas1,myVideo);
+                    //const ctx=canvas1.getContext('2d');
+                    //ctx.drawImage(myVideo,0,0,canvas1.width,canvas1.height);
+                }
+            }).catch(function (err){alert(err)});
+    </script>
+    <script src="particle.js"></script>
+    <script src="utils.js"></script>
+    <script src="effect.js"></script>
+</body>
+</html>

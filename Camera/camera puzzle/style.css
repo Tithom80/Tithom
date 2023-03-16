@@ -1,0 +1,55 @@
+body{
+    margin: 0px;
+    overflow: hidden;
+    overscroll-behavior: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:rgb(255, 196, 3);
+    color: rgba(100,100,100,1);
+}
+#menu{
+    
+    background-color: rgba(255,255,255,0.4);
+}
+#menuItems{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    text-align: center;
+    padding: 5vmin;
+    border: 1vmin rgba(0,0,0,0.5);
+    font-size: 7vmin;
+}
+button{
+    font-size: 7vmin;
+    background: rgba(123,146,196,1);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    border-radius: 2vmin;
+}
+button:hover{
+    background-color: orange;
+    color: black;
+}
+select{
+    font-size: 7vmin;
+    cursor: pointer;
+    border: none;
+    border-radius: 2vmin;
+    outline: none;
+}
+#time{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    padding-top: 20px;
+    transform: translate(-50%,-50%);
+}
+a{
+    text-decoration: none;
+    color: orange;
+}

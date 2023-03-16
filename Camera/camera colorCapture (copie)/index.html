@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Camera lecture6</title>
+    <link rel="stylesheet" href="style.css">
+    </link>
+    <script src="main.js"></script>
+</head>
+
+<body onload="main()">
+    <p>Cliquez sur la vidéo pour changer d'effet</p>
+    <canvas id="videoCanvas" onclick="nextEffect()"></canvas>
+    
+    <pre id="overlay" onclick="removeOverlay()">
+        <b>Webcam effect on Html Canvas</b>
+
+    </pre>
+    <a href="../../../programming.php">retour</a>
+    <script src="colorDetection.js"></script>
+    <script src="utils.js"></script>
+    <script>
+        new EffectColorFinder(videoCanvas,videoCanvas);
+        
+    </script>
+</body>
+
+</html>

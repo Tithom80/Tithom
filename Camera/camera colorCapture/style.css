@@ -1,0 +1,23 @@
+body{
+    background-color: gray;
+}
+canvas{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80vmin;
+    height: 80vmin;
+    
+}
+#myCanvas{
+    border: 1px solid black;
+}
+#myColorCanvas{
+    background-color: rgba(0,0,0,0.7);
+    border: 1px solid burlywood;
+}
+a{
+    position: absolute;
+    text-align: center;
+}
